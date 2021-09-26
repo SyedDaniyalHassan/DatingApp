@@ -19,13 +19,13 @@ export class AppComponent implements OnInit {
   title = 'The Dating App!';
   name="daniyal";
   id :any ;
-  User:any;
+  Users:any;
 
   httpGet()
   {
-    this.http.get("https://localhost:5001/api/users/1").subscribe(res =>{
+    this.http.get("https://localhost:5001/api/users").subscribe(res =>{
       console.log("get the response");
-      this.User = res;
+      this.Users = res;
       console.log(res);
       
     },err=>{
